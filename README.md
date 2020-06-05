@@ -1,3 +1,3 @@
 # CinePy
 
-A netflix interface clone. 
+Kinda a netflix interface clone. 
