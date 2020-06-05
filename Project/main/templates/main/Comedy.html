@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CinePy</title>
+ <link rel = "icon" href =  "cinepy.jpeg" type = "image/x-icon">
+  <link rel="stylesheet" href="{% static 'main/style.css' %}">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <script type="text/javascript" src="{% static 'main/html5lightbox/html5lightbox.js' %} "></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!-- pics by fanart.tv-->
+<div class="navbar">
+    <a href="{% url 'home' %}">CinePy</a>
+  <div class="dropdown">
+    <button class="dropbtn">Categories <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <div class="header">
+        <h2>Categories</h2>
+      </div>
+      <div class="row">
+        <div class="column">
+          <h3>Genere</h3>
+          <a href="{% url 'action' %}">Action</a>
+          <a href="{% url 'thriller' %}">Thriller</a>
+          <a href="{% url 'drama' %}">Drama</a>
+          <a href="{% url 'comedy' %}">Family And Comedy</a>
+          <a href="{% url 'romance' %}">Romance</a>
+          <a href="{% url 'fantasy' %}">Sci-Fi Fantasy</a>
+
+
+        </div>
+        <div class="column">
+          <h3>Top Charts</h3>
+          <a href="{% url 'popular' %}">Trending </a>
+          <a href="{% url 'oscars' %}">Academy Award Movies</a>
+          <a href="{% url 'top' %}">Top Rated</a>
+          </div>
+
+      </div>
+    </div>
+  </div>
+      <div class="dropdown">
+        <button class="dropbtn" >Search <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+        <form>
+  <input type="text" name="search" placeholder="Search..">
+</form>
+        </div>
+          </div>
+
+
+    <a href="#sidebar" >
+        <div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">Close  X</a>
+
+  <a href="{% url 'profile' %}">Edit Profile</a>
+  <a href="#">Contact Us</a>
+  <a href="{% url 'logout' %}">Log Out</a>
+</div>
+
+<div id="main">
+  <button class="openbtn" onclick="openNav()">☰</button>
+  </div> </a>
+    </div>
+
+
+<header>
+    <h1>          Comedy Movies</h1>
+</header>
+
+
+
+<main>
+
+   <section>
+
+    <ul>
+      <li class="item01"> <a href="#" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url({% static 'main/posters/bloodshot1.jpeg' %});">
+          <img src="{% static 'main/posters/bloodshot2.jpeg' %}"/></div></a>
+        <div class="card">
+          <h3>Bloodshot (2020)</h3>
+          <div class="info">
+
+            <div class="age">PG-13</div>
+            <div class="dur"> 1h 49min  </div>
+          </div>
+          <div class="tags"><span>Action</span><span>Sci-Fi</span><span>Thriller</span></div>
+        </div>
+      </li>
+      <li class="item02"> <a href="#" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url(posters/theavengers.jpeg);"><img src="posters/theavengers2.jpeg"/></div></a>
+        <div class="card">
+          <h3>The Avengers (2012)</h3>
+          <div class="info">
+
+            <div class="age">PG-13 </div>
+            <div class="dur"> 2h 23min </div>
+          </div>
+          <div class="tags"> <span>Action</span><span>Sci-Fi</span></div>
+        </div>
+      </li>
+      <li class="item03"> <a href="#" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url(posters/dbsbroly.jpg);"><img src="posters/dbsbroly2.jpg"/></div></a>
+        <div class="card">
+          <h3>Dragon Ball Super: Broly (2018)</h3>
+          <div class="info">
+
+            <div class="age">PG</div>
+            <div class="dur">1h 40min</div>
+          </div>
+          <div class="tags"> <span>Action</span><span>Animation</span></div>
+        </div>
+      </li>
+      <li class="item04"> <a href="#" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url(posters/endgame1.jpg);"><img src="posters/endgame2.jpg"/></div></a>
+        <div class="card">
+          <h3>Avengers: Endgame (2019)</h3>
+          <div class="info">
+
+            <div class="age">PG-13</div>
+            <div class="dur">3h 1min</div>
+          </div>
+          <div class="tags"> <span>Action </span><span>Sci-Fi</span></div>
+        </div>
+      </li>
+      <li class="item05"> <a href="#" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url(posters/terminator2.jpg);"><img src="posters/terminator1.jpg"/></div></a>
+        <div class="card">
+          <h3>Terminator: Dark Fate (2019)</h3>
+          <div class="info">
+
+            <div class="age">R</div>
+            <div class="dur">2h 8min </div>
+          </div>
+          <div class="tags"> <span>Action</span><span>Sci-Fi</span></div>
+        </div>
+      </li>
+      <li class="item06"> <a href="#" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url(posters/zombieland1.jpeg);"><img src="posters/zombieland2.jpeg"/></div></a>
+        <div class="card">
+          <h3>Zombieland: Double Tap (2019)</h3>
+          <div class="info">
+            <div class="age">R</div>
+            <div class="dur"> 1h 39min </div>
+          </div>
+          <div class="tags"> <span>Action</span><span>Comedy</span></div>
+        </div>
+      </li>
+    </ul>
+  </section>
+<section>
+
+    <ul>
+      <li class="item01"> <a href="#" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url(posters/bloodshot1.jpeg);"><img src="posters/bloodshot2.jpeg"/></div></a>
+        <div class="card">
+          <h3>Bloodshot (2020)</h3>
+          <div class="info">
+
+            <div class="age">PG-13</div>
+            <div class="dur"> 1h 49min  </div>
+          </div>
+          <div class="tags"><span>Action</span><span>Sci-Fi</span><span>Thriller</span></div>
+        </div>
+      </li>
+      <li class="item02"> <a href="#" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url(posters/theavengers.jpeg);"><img src="posters/theavengers2.jpeg"/></div></a>
+        <div class="card">
+          <h3>The Avengers (2012)</h3>
+          <div class="info">
+
+            <div class="age">PG-13 </div>
+            <div class="dur"> 2h 23min </div>
+          </div>
+          <div class="tags"> <span>Action</span><span>Sci-Fi</span></div>
+        </div>
+      </li>
+      <li class="item03"> <a href="#" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url(posters/dbsbroly.jpg);"><img src="posters/dbsbroly2.jpg"/></div></a>
+        <div class="card">
+          <h3>Dragon Ball Super: Broly (2018)</h3>
+          <div class="info">
+
+            <div class="age">PG</div>
+            <div class="dur">1h 40min</div>
+          </div>
+          <div class="tags"> <span>Action</span><span>Animation</span></div>
+        </div>
+      </li>
+      <li class="item04"> <a href="#" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url(posters/endgame1.jpg);"><img src="posters/endgame2.jpg"/></div></a>
+        <div class="card">
+          <h3>Avengers: Endgame (2019)</h3>
+          <div class="info">
+
+            <div class="age">PG-13</div>
+            <div class="dur">3h 1min</div>
+          </div>
+          <div class="tags"> <span>Action </span><span>Sci-Fi</span></div>
+        </div>
+      </li>
+      <li class="item05"> <a href="#" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url(posters/terminator2.jpg);"><img src="posters/terminator1.jpg"/></div></a>
+        <div class="card">
+          <h3>Terminator: Dark Fate (2019)</h3>
+          <div class="info">
+
+            <div class="age">R</div>
+            <div class="dur">2h 8min </div>
+          </div>
+          <div class="tags"> <span>Action</span><span>Sci-Fi</span></div>
+        </div>
+      </li>
+      <li class="item06"> <a href="#" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url(posters/zombieland1.jpeg);"><img src="posters/zombieland2.jpeg"/></div></a>
+        <div class="card">
+          <h3>Zombieland: Double Tap (2019)</h3>
+          <div class="info">
+            <div class="age">R</div>
+            <div class="dur"> 1h 39min </div>
+          </div>
+          <div class="tags"> <span>Action</span><span>Comedy</span></div>
+        </div>
+      </li>
+    </ul>
+  </section>
+<section>
+
+    <ul>
+      <li class="item01"> <a href="#" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url(posters/bloodshot1.jpeg);"><img src="posters/bloodshot2.jpeg"/></div></a>
+        <div class="card">
+          <h3>Bloodshot (2020)</h3>
+          <div class="info">
+
+            <div class="age">PG-13</div>
+            <div class="dur"> 1h 49min  </div>
+          </div>
+          <div class="tags"><span>Action</span><span>Sci-Fi</span><span>Thriller</span></div>
+        </div>
+      </li>
+      <li class="item02"> <a href="#" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url(posters/theavengers.jpeg);"><img src="posters/theavengers2.jpeg"/></div></a>
+        <div class="card">
+          <h3>The Avengers (2012)</h3>
+          <div class="info">
+
+            <div class="age">PG-13 </div>
+            <div class="dur"> 2h 23min </div>
+          </div>
+          <div class="tags"> <span>Action</span><span>Sci-Fi</span></div>
+        </div>
+      </li>
+      <li class="item03"> <a href="#" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url(posters/dbsbroly.jpg);"><img src="posters/dbsbroly2.jpg"/></div></a>
+        <div class="card">
+          <h3>Dragon Ball Super: Broly (2018)</h3>
+          <div class="info">
+
+            <div class="age">PG</div>
+            <div class="dur">1h 40min</div>
+          </div>
+          <div class="tags"> <span>Action</span><span>Animation</span></div>
+        </div>
+      </li>
+      <li class="item04"> <a href="#" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url(posters/endgame1.jpg);"><img src="posters/endgame2.jpg"/></div></a>
+        <div class="card">
+          <h3>Avengers: Endgame (2019)</h3>
+          <div class="info">
+
+            <div class="age">PG-13</div>
+            <div class="dur">3h 1min</div>
+          </div>
+          <div class="tags"> <span>Action </span><span>Sci-Fi</span></div>
+        </div>
+      </li>
+      <li class="item05"> <a href="#" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url(posters/terminator2.jpg);"><img src="posters/terminator1.jpg"/></div></a>
+        <div class="card">
+          <h3>Terminator: Dark Fate (2019)</h3>
+          <div class="info">
+
+            <div class="age">R</div>
+            <div class="dur">2h 8min </div>
+          </div>
+          <div class="tags"> <span>Action</span><span>Sci-Fi</span></div>
+        </div>
+      </li>
+      <li class="item06"> <a href="#" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url(posters/zombieland1.jpeg);"><img src="posters/zombieland2.jpeg"/></div></a>
+        <div class="card">
+          <h3>Zombieland: Double Tap (2019)</h3>
+          <div class="info">
+            <div class="age">R</div>
+            <div class="dur"> 1h 39min </div>
+          </div>
+          <div class="tags"> <span>Action</span><span>Comedy</span></div>
+        </div>
+      </li>
+    </ul>
+  </section>
+<section>
+
+    <ul>
+      <li class="item01"> <a href="#" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url(posters/bloodshot1.jpeg);"><img src="posters/bloodshot2.jpeg"/></div></a>
+        <div class="card">
+          <h3>Bloodshot (2020)</h3>
+          <div class="info">
+
+            <div class="age">PG-13</div>
+            <div class="dur"> 1h 49min  </div>
+          </div>
+          <div class="tags"><span>Action</span><span>Sci-Fi</span><span>Thriller</span></div>
+        </div>
+      </li>
+      <li class="item02"> <a href="#" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url(posters/theavengers.jpeg);"><img src="posters/theavengers2.jpeg"/></div></a>
+        <div class="card">
+          <h3>The Avengers (2012)</h3>
+          <div class="info">
+
+            <div class="age">PG-13 </div>
+            <div class="dur"> 2h 23min </div>
+          </div>
+          <div class="tags"> <span>Action</span><span>Sci-Fi</span></div>
+        </div>
+      </li>
+      <li class="item03"> <a href="#" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url(posters/dbsbroly.jpg);"><img src="posters/dbsbroly2.jpg"/></div></a>
+        <div class="card">
+          <h3>Dragon Ball Super: Broly (2018)</h3>
+          <div class="info">
+
+            <div class="age">PG</div>
+            <div class="dur">1h 40min</div>
+          </div>
+          <div class="tags"> <span>Action</span><span>Animation</span></div>
+        </div>
+      </li>
+      <li class="item04"> <a href="#" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url(posters/endgame1.jpg);"><img src="posters/endgame2.jpg"/></div></a>
+        <div class="card">
+          <h3>Avengers: Endgame (2019)</h3>
+          <div class="info">
+
+            <div class="age">PG-13</div>
+            <div class="dur">3h 1min</div>
+          </div>
+          <div class="tags"> <span>Action </span><span>Sci-Fi</span></div>
+        </div>
+      </li>
+      <li class="item05"> <a href="#" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url(posters/terminator2.jpg);"><img src="posters/terminator1.jpg"/></div></a>
+        <div class="card">
+          <h3>Terminator: Dark Fate (2019)</h3>
+          <div class="info">
+
+            <div class="age">R</div>
+            <div class="dur">2h 8min </div>
+          </div>
+          <div class="tags"> <span>Action</span><span>Sci-Fi</span></div>
+        </div>
+      </li>
+      <li class="item06"> <a href="#" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url(posters/zombieland1.jpeg);"><img src="posters/zombieland2.jpeg"/></div></a>
+        <div class="card">
+          <h3>Zombieland: Double Tap (2019)</h3>
+          <div class="info">
+            <div class="age">R</div>
+            <div class="dur"> 1h 39min </div>
+          </div>
+          <div class="tags"> <span>Action</span><span>Comedy</span></div>
+        </div>
+      </li>
+    </ul>
+  </section>
+<section>
+
+    <ul>
+      <li class="item01"> <a href="#" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url(posters/bloodshot1.jpeg);"><img src="posters/bloodshot2.jpeg"/></div></a>
+        <div class="card">
+          <h3>Bloodshot (2020)</h3>
+          <div class="info">
+
+            <div class="age">PG-13</div>
+            <div class="dur"> 1h 49min  </div>
+          </div>
+          <div class="tags"><span>Action</span><span>Sci-Fi</span><span>Thriller</span></div>
+        </div>
+      </li>
+      <li class="item02"> <a href="#" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url(posters/theavengers.jpeg);"><img src="posters/theavengers2.jpeg"/></div></a>
+        <div class="card">
+          <h3>The Avengers (2012)</h3>
+          <div class="info">
+
+            <div class="age">PG-13 </div>
+            <div class="dur"> 2h 23min </div>
+          </div>
+          <div class="tags"> <span>Action</span><span>Sci-Fi</span></div>
+        </div>
+      </li>
+      <li class="item03"> <a href="#" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url(posters/dbsbroly.jpg);"><img src="posters/dbsbroly2.jpg"/></div></a>
+        <div class="card">
+          <h3>Dragon Ball Super: Broly (2018)</h3>
+          <div class="info">
+
+            <div class="age">PG</div>
+            <div class="dur">1h 40min</div>
+          </div>
+          <div class="tags"> <span>Action</span><span>Animation</span></div>
+        </div>
+      </li>
+      <li class="item04"> <a href="#" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url(posters/endgame1.jpg);"><img src="posters/endgame2.jpg"/></div></a>
+        <div class="card">
+          <h3>Avengers: Endgame (2019)</h3>
+          <div class="info">
+
+            <div class="age">PG-13</div>
+            <div class="dur">3h 1min</div>
+          </div>
+          <div class="tags"> <span>Action </span><span>Sci-Fi</span></div>
+        </div>
+      </li>
+      <li class="item05"> <a href="#" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url(posters/terminator2.jpg);"><img src="posters/terminator1.jpg"/></div></a>
+        <div class="card">
+          <h3>Terminator: Dark Fate (2019)</h3>
+          <div class="info">
+
+            <div class="age">R</div>
+            <div class="dur">2h 8min </div>
+          </div>
+          <div class="tags"> <span>Action</span><span>Sci-Fi</span></div>
+        </div>
+      </li>
+      <li class="item06"> <a href="#" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url(posters/zombieland1.jpeg);"><img src="posters/zombieland2.jpeg"/></div></a>
+        <div class="card">
+          <h3>Zombieland: Double Tap (2019)</h3>
+          <div class="info">
+            <div class="age">R</div>
+            <div class="dur"> 1h 39min </div>
+          </div>
+          <div class="tags"> <span>Action</span><span>Comedy</span></div>
+        </div>
+      </li>
+    </ul>
+  </section>
+</main>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script><script  src="{% static 'main/script.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'main/home.css' %}"/>
+    <title>Browse</title>
+</head>
+<body>
+    <h1>Main Page</h1>
+    {% for movie in movies %}
+        <h2>{{movie.title}}</h2><br><br>
+        <h2>{{movie.genre}}</h2>
+    {% endfor %}
+    <p class="sign">Test css</p>
+
+<p><a href ='{% url 'logout' %}'>Logout</p>
+<p><a href ='{% url 'profile' %}'>Profile</p>
+</body>
+</html>

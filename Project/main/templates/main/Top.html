@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CinePy</title>
+ <link rel = "icon" href =  "cinepy.jpeg" type = "image/x-icon">
+  <link rel="stylesheet" href="{% static 'main/style.css' %}">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <script type="text/javascript" src="{% static 'main/html5lightbox/html5lightbox.js' %} "></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!-- pics by fanart.tv-->
+<div class="navbar">
+    <a href="{% url 'home' %}">CinePy</a>
+  <div class="dropdown">
+    <button class="dropbtn">Categories <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <div class="header">
+        <h2>Categories</h2>
+      </div>
+      <div class="row">
+        <div class="column">
+          <h3>Genere</h3>
+          <a href="{% url 'action' %}">Action</a>
+          <a href="{% url 'thriller' %}">Thriller</a>
+          <a href="{% url 'drama' %}">Drama</a>
+          <a href="{% url 'comedy' %}">Family And Comedy</a>
+          <a href="{% url 'romance' %}">Romance</a>
+          <a href="{% url 'fantasy' %}">Sci-Fi Fantasy</a>
+
+
+        </div>
+        <div class="column">
+          <h3>Top Charts</h3>
+          <a href="{% url 'popular' %}">Trending </a>
+          <a href="{% url 'oscars' %}">Academy Award Movies</a>
+          <a href="{% url 'top' %}">Top Rated</a>
+          </div>
+
+      </div>
+    </div>
+  </div>
+      <div class="dropdown">
+        <button class="dropbtn" >Search <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+        <form>
+  <input type="text" name="search" placeholder="Search..">
+</form>
+        </div>
+          </div>
+
+
+    <a href="#sidebar" >
+        <div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">Close  X</a>
+
+  <a href="{% url 'profile' %}">Edit Profile</a>
+  <a href="#">Contact Us</a>
+  <a href="{% url 'logout' %}">Log Out</a>
+</div>
+
+<div id="main">
+  <button class="openbtn" onclick="openNav()">☰</button>
+  </div> </a>
+    </div>
+
+<header>
+    <h1>          Top Rated Movies</h1>
+</header>
+
+
+
+<main>
+
+  <section>
+
+    <ul>
+     <li class="item01">
+        <div class="img" style="background-image: url({% static 'main/posters/hpdhp1.png' %});">
+<img src="{% static 'main/posters/Harry Potter and the Chamber of Secrets (2002).png' %}"></div>
+        <div class="card">
+          <h3>Once upon a time in... Hollywood</h3>
+          <div class="info">
+
+            <div class="age">U/A</div>
+            <div class="dur">2h 40min </div>
+          </div>
+          <div class="tags"> <span>Comedy</span><span>Drama</span><span>Action</span></div>
+        </div>
+      </li>
+      <li class="item02">
+       <a href="test.html"> <div class="img" style="background-image: url(https://fanart.tv/fanart/movies/475557/moviethumb/joker-5db693c454a3e.jpg);"><img src="https://fanart.tv/fanart/movies/475557/moviebackground/joker-5d68337505352.jpg"/> </div></a>
+        <div class="card">
+          <h3>Joker</h3>
+          <div class="info">
+
+            <div class="age">TV-14</div>
+            <div class="dur">2h 2min </div>
+          </div>
+          <div class="tags"> <span>Crime</span><span>Drama</span><span>Thriller</span></div>
+        </div>
+      </li>
+      <li class="item03">
+        <div class="img" style="background-image: url(https://fanart.tv/fanart/movies/496243/moviethumb/parasite-5d2d5ab30c73d.jpg);"><img src="https://fanart.tv/fanart/movies/496243/moviebackground/parasite-5df5fb5439d1d.jpg"/></div>
+        <div class="card">
+          <h3>Parasite</h3>
+          <div class="info">
+
+            <div class="age">TV-14</div>
+            <div class="dur">2h 12min </div>
+          </div>
+          <div class="tags"> <span>Comedy</span><span>Crime</span><span>Drama</span></div>
+        </div>
+      </li>
+      <li class="item04">
+        <div class="img" style="background-image: url(https://fanart.tv/fanart/movies/359724/moviethumb/ford-v-ferrari-5db74ab5a49b9.jpg);"><img src="https://fanart.tv/fanart/movies/359724/moviebackground/go-like-hell-5d0839e2ecc25.jpg"/></div>
+        <div class="card">
+          <h3>Ford v. Ferrari</h3>
+          <div class="info">
+
+            <div class="age">TV-PG</div>
+            <div class="dur">2h 32min </div>
+          </div>
+          <div class="tags"> <span>Action</span><span>Biography</span><span>Drama</span></div>
+        </div>
+      </li>
+      <li class="item05">
+        <div class="img" style="background-image: url(https://fanart.tv/fanart/movies/398978/moviethumb/the-irishman-5ded4b24803d2.jpg);"><img src="https://fanart.tv/fanart/movies/398978/moviebackground/the-irishman-5de15d18d48f4.jpg"/></div>
+        <div class="card">
+          <h3>The Irishman</h3>
+          <div class="info">
+
+            <div class="age">TV-MA</div>
+            <div class="dur">3h 29min </div>
+          </div>
+          <div class="tags"> <span>Biography</span><span>Crime</span><span>Drama</span></div>
+        </div>
+      </li>
+      <li class="item06">
+        <div class="img" style="background-image: url(https://fanart.tv/fanart/movies/492188/moviethumb/marriage-story-5dd0c5d3db138.jpg);"><img src="https://fanart.tv/fanart/movies/492188/moviebackground/marriage-story-5def5bf3a229b.jpg"/></div>
+        <div class="card">
+          <h3>Marriage Story</h3>
+          <div class="info">
+
+            <div class="age">TV-14</div>
+            <div class="dur">2h 17min </div>
+          </div>
+          <div class="tags"> <span>Comedy</span><span>Drama</span><span>Romance</span></div>
+        </div>
+      </li>
+    </ul>
+  </section>
+<section>
+
+    <ul>
+     <li class="item01">
+        <div class="img" style="background-image: url(https://fanart.tv/fanart/movies/466272/moviethumb/once-upon-a-time-in-hollywood-5dfeb7beb0d22.jpg);">
+<img src="bg.jpg"></div>
+        <div class="card">
+          <h3>Once upon a time in... Hollywood</h3>
+          <div class="info">
+
+            <div class="age">U/A</div>
+            <div class="dur">2h 40min </div>
+          </div>
+          <div class="tags"> <span>Comedy</span><span>Drama</span><span>Action</span></div>
+        </div>
+      </li>
+      <li class="item02">
+       <a href="test.html"> <div class="img" style="background-image: url(https://fanart.tv/fanart/movies/475557/moviethumb/joker-5db693c454a3e.jpg);"><img src="https://fanart.tv/fanart/movies/475557/moviebackground/joker-5d68337505352.jpg"/> </div></a>
+        <div class="card">
+          <h3>Joker</h3>
+          <div class="info">
+
+            <div class="age">TV-14</div>
+            <div class="dur">2h 2min </div>
+          </div>
+          <div class="tags"> <span>Crime</span><span>Drama</span><span>Thriller</span></div>
+        </div>
+      </li>
+      <li class="item03">
+        <div class="img" style="background-image: url(https://fanart.tv/fanart/movies/496243/moviethumb/parasite-5d2d5ab30c73d.jpg);"><img src="https://fanart.tv/fanart/movies/496243/moviebackground/parasite-5df5fb5439d1d.jpg"/></div>
+        <div class="card">
+          <h3>Parasite</h3>
+          <div class="info">
+
+            <div class="age">TV-14</div>
+            <div class="dur">2h 12min </div>
+          </div>
+          <div class="tags"> <span>Comedy</span><span>Crime</span><span>Drama</span></div>
+        </div>
+      </li>
+      <li class="item04">
+        <div class="img" style="background-image: url(https://fanart.tv/fanart/movies/359724/moviethumb/ford-v-ferrari-5db74ab5a49b9.jpg);"><img src="https://fanart.tv/fanart/movies/359724/moviebackground/go-like-hell-5d0839e2ecc25.jpg"/></div>
+        <div class="card">
+          <h3>Ford v. Ferrari</h3>
+          <div class="info">
+
+            <div class="age">TV-PG</div>
+            <div class="dur">2h 32min </div>
+          </div>
+          <div class="tags"> <span>Action</span><span>Biography</span><span>Drama</span></div>
+        </div>
+      </li>
+      <li class="item05">
+        <div class="img" style="background-image: url(https://fanart.tv/fanart/movies/398978/moviethumb/the-irishman-5ded4b24803d2.jpg);"><img src="https://fanart.tv/fanart/movies/398978/moviebackground/the-irishman-5de15d18d48f4.jpg"/></div>
+        <div class="card">
+          <h3>The Irishman</h3>
+          <div class="info">
+
+            <div class="age">TV-MA</div>
+            <div class="dur">3h 29min </div>
+          </div>
+          <div class="tags"> <span>Biography</span><span>Crime</span><span>Drama</span></div>
+        </div>
+      </li>
+      <li class="item06">
+        <div class="img" style="background-image: url(https://fanart.tv/fanart/movies/492188/moviethumb/marriage-story-5dd0c5d3db138.jpg);"><img src="https://fanart.tv/fanart/movies/492188/moviebackground/marriage-story-5def5bf3a229b.jpg"/></div>
+        <div class="card">
+          <h3>Marriage Story</h3>
+          <div class="info">
+
+            <div class="age">TV-14</div>
+            <div class="dur">2h 17min </div>
+          </div>
+          <div class="tags"> <span>Comedy</span><span>Drama</span><span>Romance</span></div>
+        </div>
+      </li>
+    </ul>
+  </section>
+<section>
+
+    <ul>
+     <li class="item01">
+        <div class="img" style="background-image: url(https://fanart.tv/fanart/movies/466272/moviethumb/once-upon-a-time-in-hollywood-5dfeb7beb0d22.jpg);">
+<img src="bg.jpg"></div>
+        <div class="card">
+          <h3>Once upon a time in... Hollywood</h3>
+          <div class="info">
+
+            <div class="age">U/A</div>
+            <div class="dur">2h 40min </div>
+          </div>
+          <div class="tags"> <span>Comedy</span><span>Drama</span><span>Action</span></div>
+        </div>
+      </li>
+      <li class="item02">
+       <a href="test.html"> <div class="img" style="background-image: url(https://fanart.tv/fanart/movies/475557/moviethumb/joker-5db693c454a3e.jpg);"><img src="https://fanart.tv/fanart/movies/475557/moviebackground/joker-5d68337505352.jpg"/> </div></a>
+        <div class="card">
+          <h3>Joker</h3>
+          <div class="info">
+
+            <div class="age">TV-14</div>
+            <div class="dur">2h 2min </div>
+          </div>
+          <div class="tags"> <span>Crime</span><span>Drama</span><span>Thriller</span></div>
+        </div>
+      </li>
+      <li class="item03">
+        <div class="img" style="background-image: url(https://fanart.tv/fanart/movies/496243/moviethumb/parasite-5d2d5ab30c73d.jpg);"><img src="https://fanart.tv/fanart/movies/496243/moviebackground/parasite-5df5fb5439d1d.jpg"/></div>
+        <div class="card">
+          <h3>Parasite</h3>
+          <div class="info">
+
+            <div class="age">TV-14</div>
+            <div class="dur">2h 12min </div>
+          </div>
+          <div class="tags"> <span>Comedy</span><span>Crime</span><span>Drama</span></div>
+        </div>
+      </li>
+      <li class="item04">
+        <div class="img" style="background-image: url(https://fanart.tv/fanart/movies/359724/moviethumb/ford-v-ferrari-5db74ab5a49b9.jpg);"><img src="https://fanart.tv/fanart/movies/359724/moviebackground/go-like-hell-5d0839e2ecc25.jpg"/></div>
+        <div class="card">
+          <h3>Ford v. Ferrari</h3>
+          <div class="info">
+
+            <div class="age">TV-PG</div>
+            <div class="dur">2h 32min </div>
+          </div>
+          <div class="tags"> <span>Action</span><span>Biography</span><span>Drama</span></div>
+        </div>
+      </li>
+      <li class="item05">
+        <div class="img" style="background-image: url(https://fanart.tv/fanart/movies/398978/moviethumb/the-irishman-5ded4b24803d2.jpg);"><img src="https://fanart.tv/fanart/movies/398978/moviebackground/the-irishman-5de15d18d48f4.jpg"/></div>
+        <div class="card">
+          <h3>The Irishman</h3>
+          <div class="info">
+
+            <div class="age">TV-MA</div>
+            <div class="dur">3h 29min </div>
+          </div>
+          <div class="tags"> <span>Biography</span><span>Crime</span><span>Drama</span></div>
+        </div>
+      </li>
+      <li class="item06">
+        <div class="img" style="background-image: url(https://fanart.tv/fanart/movies/492188/moviethumb/marriage-story-5dd0c5d3db138.jpg);"><img src="https://fanart.tv/fanart/movies/492188/moviebackground/marriage-story-5def5bf3a229b.jpg"/></div>
+        <div class="card">
+          <h3>Marriage Story</h3>
+          <div class="info">
+
+            <div class="age">TV-14</div>
+            <div class="dur">2h 17min </div>
+          </div>
+          <div class="tags"> <span>Comedy</span><span>Drama</span><span>Romance</span></div>
+        </div>
+      </li>
+    </ul>
+  </section>
+<section>
+
+    <ul>
+     <li class="item01">
+        <div class="img" style="background-image: url(https://fanart.tv/fanart/movies/466272/moviethumb/once-upon-a-time-in-hollywood-5dfeb7beb0d22.jpg);">
+<img src="bg.jpg"></div>
+        <div class="card">
+          <h3>Once upon a time in... Hollywood</h3>
+          <div class="info">
+
+            <div class="age">U/A</div>
+            <div class="dur">2h 40min </div>
+          </div>
+          <div class="tags"> <span>Comedy</span><span>Drama</span><span>Action</span></div>
+        </div>
+      </li>
+      <li class="item02">
+       <a href="test.html"> <div class="img" style="background-image: url(https://fanart.tv/fanart/movies/475557/moviethumb/joker-5db693c454a3e.jpg);"><img src="https://fanart.tv/fanart/movies/475557/moviebackground/joker-5d68337505352.jpg"/> </div></a>
+        <div class="card">
+          <h3>Joker</h3>
+          <div class="info">
+
+            <div class="age">TV-14</div>
+            <div class="dur">2h 2min </div>
+          </div>
+          <div class="tags"> <span>Crime</span><span>Drama</span><span>Thriller</span></div>
+        </div>
+      </li>
+      <li class="item03">
+        <div class="img" style="background-image: url(https://fanart.tv/fanart/movies/496243/moviethumb/parasite-5d2d5ab30c73d.jpg);"><img src="https://fanart.tv/fanart/movies/496243/moviebackground/parasite-5df5fb5439d1d.jpg"/></div>
+        <div class="card">
+          <h3>Parasite</h3>
+          <div class="info">
+
+            <div class="age">TV-14</div>
+            <div class="dur">2h 12min </div>
+          </div>
+          <div class="tags"> <span>Comedy</span><span>Crime</span><span>Drama</span></div>
+        </div>
+      </li>
+      <li class="item04">
+        <div class="img" style="background-image: url(https://fanart.tv/fanart/movies/359724/moviethumb/ford-v-ferrari-5db74ab5a49b9.jpg);"><img src="https://fanart.tv/fanart/movies/359724/moviebackground/go-like-hell-5d0839e2ecc25.jpg"/></div>
+        <div class="card">
+          <h3>Ford v. Ferrari</h3>
+          <div class="info">
+
+            <div class="age">TV-PG</div>
+            <div class="dur">2h 32min </div>
+          </div>
+          <div class="tags"> <span>Action</span><span>Biography</span><span>Drama</span></div>
+        </div>
+      </li>
+      <li class="item05">
+        <div class="img" style="background-image: url(https://fanart.tv/fanart/movies/398978/moviethumb/the-irishman-5ded4b24803d2.jpg);"><img src="https://fanart.tv/fanart/movies/398978/moviebackground/the-irishman-5de15d18d48f4.jpg"/></div>
+        <div class="card">
+          <h3>The Irishman</h3>
+          <div class="info">
+
+            <div class="age">TV-MA</div>
+            <div class="dur">3h 29min </div>
+          </div>
+          <div class="tags"> <span>Biography</span><span>Crime</span><span>Drama</span></div>
+        </div>
+      </li>
+      <li class="item06">
+        <div class="img" style="background-image: url(https://fanart.tv/fanart/movies/492188/moviethumb/marriage-story-5dd0c5d3db138.jpg);"><img src="https://fanart.tv/fanart/movies/492188/moviebackground/marriage-story-5def5bf3a229b.jpg"/></div>
+        <div class="card">
+          <h3>Marriage Story</h3>
+          <div class="info">
+
+            <div class="age">TV-14</div>
+            <div class="dur">2h 17min </div>
+          </div>
+          <div class="tags"> <span>Comedy</span><span>Drama</span><span>Romance</span></div>
+        </div>
+      </li>
+    </ul>
+  </section>
+</main>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script><script  src="{% static 'main/script.js' %}"></script>
+</body>
+</html>
